@@ -32,3 +32,13 @@ println(baseEmpresa.'1014230323'['Direccion'])
  baseEmpresa.each{empleados ->
   println(empleados)
  }
+
+  def fullName (base){
+   def listaNombres= []
+   def fullNombre = ''
+   base.each{ empleado ->
+    fullNombre = empleado.value.Nombre
+    println(fullNombre)
+   }
+ }
+ fullName(baseEmpresa)
