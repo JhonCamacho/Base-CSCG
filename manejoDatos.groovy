@@ -21,24 +21,12 @@ baseEmpresa['1022864345']=['Nombre':'Lorena','apellido':'Rincon','segnom':'Marce
 'Empleos':[["Cargo":"Gerente talento humano","Años":2,"Empresa":"Humanoide"],["Cargo":"Supervisor","años":3,"Empresa":"RecursoH"],["Cargo":"Analista","años":5,"Empresa":"TalentX"]]
  ,"Direccion":"Avenida 68 calle 77 - 15"]
  
-//Validaciones forma de obtener informacion.
-println(baseEmpresa)
-println(baseEmpresa.'1014230323'.Empleos)
-println(baseEmpresa['1014230323']['Empleos'][2])
-println(baseEmpresa.'1014230323'.Empleos[2])
-println(baseEmpresa.'1014230323'['Empleos'][2])
-println(baseEmpresa.'1014230323'['Direccion'])
-
- baseEmpresa.each{empleados ->
-  println(empleados)
- }
-
-  def fullName (base){
+def fullName (base){
    def listaNombres= []
    def fullNombre = ''
    base.each{ empleado ->
-    fullNombre = empleado.value.Nombre
-    println(fullNombre)
+        fullNombre = empleado.value.Nombre +' '+ empleado.value.Segnom +' '+ empleado.value.Apellido +' '+empleado.value.Nickname
+        listaNombres.add(fullNombre)
    }
+   return listaNombres
  }
- fullName(baseEmpresa)
