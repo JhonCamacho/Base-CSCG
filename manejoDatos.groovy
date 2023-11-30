@@ -32,3 +32,9 @@ println(baseEmpresa.'1014230323'['Direccion'])
  baseEmpresa.each{empleados ->
   println(empleados)
  }
+//validaciones acceso campos años
+println(baseEmpresa.'101567786'.Empleos[2])
+println(baseEmpresa.'101567786'.Empleos[0].Años)
+println(baseEmpresa.'101567786'.Empleos[1].Años)
+println(baseEmpresa.'101567786'.Empleos[2].Años)
+println(baseEmpresa.'101567786'.Empleos[0].Años +baseEmpresa.'101567786'.Empleos[1].Años+baseEmpresa.'101567786'.Empleos[2].Años )
