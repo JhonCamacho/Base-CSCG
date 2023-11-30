@@ -38,3 +38,16 @@ println(baseEmpresa.'101567786'.Empleos[0].Años)
 println(baseEmpresa.'101567786'.Empleos[1].Años)
 println(baseEmpresa.'101567786'.Empleos[2].Años)
 println(baseEmpresa.'101567786'.Empleos[0].Años +baseEmpresa.'101567786'.Empleos[1].Años+baseEmpresa.'101567786'.Empleos[2].Años )
+
+//Funcion que retorna dos maneras de visualizar la experiencia total de cada empleado.
+def experiencia (base){
+   def tiempo = 0
+   def duracion=[]
+   base.each{empleado ->
+   tiempo =empleado.value.Empleos[0].Años+empleado.value.Empleos[1].Años+empleado.value.Empleos[2].Años   
+   println(tiempo)
+   duracion.add(tiempo)
+   }
+  return duracion
+ }
+println(experiencia (baseEmpresa))
