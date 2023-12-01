@@ -32,3 +32,19 @@ println(baseEmpresa.'1014230323'['Direccion'])
  baseEmpresa.each{empleados ->
   println(empleados)
  }
+
+ //Se encuentra una manera en que la funcion puede adicionar un empleado a la base.(pruebas de alcace clave)
+ def contratarEmpleado (base, mapaEmpleado){
+  mapaEmpleado.each{aspirante  ->
+    //println("$aspirante = $informacion")
+    //println("$aspirante.key = $aspirante.value")
+    registro = aspirante.key
+    info = aspirante.value
+  }
+ base[registro]= info
+}
+contratarEmpleado(baseEmpresa,nombreMapa)
+
+baseEmpresa.each{empleados ->
+  println(empleados)
+ }
