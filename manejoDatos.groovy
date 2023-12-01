@@ -65,10 +65,17 @@ if(nombreMapa.'70569396'.Nombre !='' && nombreMapa.'70569396'.Apellido !='' && n
 }else{
   println('Valide datos')
 }
-//
+//Funcion para validar campos obligatorios de la informacion del empleado a contratar.
 def validacionCampos(mapaAspirante){
+  def resultado =''
   mapaAspirante.each{ aspirante , informacion ->
-  println(informacion.Nombre)
+    if(informacion.Nombre !=''&& informacion.Apellido != '' && informacion.Nickname != '' && informacion.Direccion != ''){
+      resultado = 'Aprobado'
+    }else{
+      resultado = 'Novedad'
+    }
   }
+ return resultado
 }
-validacionCampos(nombreMapa)
+def validacion=validacionCampos(nombreMapa)
+println (validacion)
