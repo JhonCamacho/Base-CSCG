@@ -52,8 +52,23 @@ def formatoContratacion = ['Cedula**':['Nombre**':'','Apellido**':'','Segnom':''
 def nombreMapa=['70569396':['Nombre':'','Apellido':'Marin','Segnom':'','Nickname':'Paz','Empleos':[],'Direccion':'Av carrera 33 casa esquina verde']]
 println(nombreMapa)
 
-if(nombreMapa.'70569396'.Nombre !=''){
+//Validacion manual de todos los campos declarados como obligatorios e inicio de la formacion de funcion para validacion generica.
+/*
+Nombre -> si obligatorio
+Apellido -> si obligatorio
+segnom -> no obligatorio
+nickname -> si obligatorio
+Empleos-> no obligatorio
+Direccion-> si obligatorio */
+if(nombreMapa.'70569396'.Nombre !='' && nombreMapa.'70569396'.Apellido !='' && nombreMapa.'70569396'.Nickname !='' && nombreMapa.'70569396'.Direccion !=''){
   println('Exitoso')
 }else{
   println('Valide datos')
 }
+//
+def validacionCampos(mapaAspirante){
+  mapaAspirante.each{ aspirante , informacion ->
+  println(informacion.Nombre)
+  }
+}
+validacionCampos(nombreMapa)
