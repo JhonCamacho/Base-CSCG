@@ -32,7 +32,6 @@ println(baseEmpresa.'1014230323'['Direccion'])
  baseEmpresa.each{empleados ->
   println(empleados)
  }
-
  //Se encuentra una manera en que la funcion puede adicionar un empleado a la base.(pruebas de alcace clave)
  def contratarEmpleado (base, mapaEmpleado){
   mapaEmpleado.each{aspirante  ->
@@ -48,3 +47,13 @@ contratarEmpleado(baseEmpresa,nombreMapa)
 baseEmpresa.each{empleados ->
   println(empleados)
  }
+//Validacion manual del contenido del primer campo de informacion del empleado.
+def formatoContratacion = ['Cedula**':['Nombre**':'','Apellido**':'','Segnom':'','Nickname**':'','Empleos':[],'Direccion**':'']]
+def nombreMapa=['70569396':['Nombre':'','Apellido':'Marin','Segnom':'','Nickname':'Paz','Empleos':[],'Direccion':'Av carrera 33 casa esquina verde']]
+println(nombreMapa)
+
+if(nombreMapa.'70569396'.Nombre !=''){
+  println('Exitoso')
+}else{
+  println('Valide datos')
+}
