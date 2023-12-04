@@ -41,3 +41,16 @@ baseEmpresa.'72345667'.Empleos.add(['Cargo':'Nuevo Arquitecto','Años':1,'Empres
 
 def formatoRegistroEmpleo = ['Cargo':'','Años':'','Empresa':'']
 def nuevoRegistro = ['Cargo':'Guarda Seguridad','Años':4,'Empresa':'Securitas']
+
+//baseEmpresa.'72345667'.Empleos = [nuevoRegistro] + baseEmpresa.'72345667'.Empleos
+//Funcion para agregar un nuevo empleo en la informacion del empleado con multiples soluciones.
+def AgregarNuevoEmpleo (base , empleado ,empleo){
+  //base[empleado].Empleos.add([empleo])
+  // base[empleado].Empleos = [empleo] + base[empleado].Empleos 
+  //base[empleado].Empleos.add(0,[empleo])
+  base[empleado].Empleos.add(2,[empleo])
+}
+
+AgregarNuevoEmpleo (baseEmpresa , '72345667' ,nuevoRegistro)
+
+println(baseEmpresa.'72345667')
