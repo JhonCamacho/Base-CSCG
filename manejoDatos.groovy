@@ -32,3 +32,12 @@ println(baseEmpresa.'1014230323'['Direccion'])
  baseEmpresa.each{empleados ->
   println(empleados)
  }
+
+ //validaciones manuales a campo empleos 
+baseEmpresa.'72345667'.Empleos.add(['Cargo':'Nuevo Arquitecto','Años':1,'Empresa':'Obra de Dios'])
+//println(baseEmpresa.'72345667'.Empleos)
+
+//println(baseEmpresa['72345667'].Empleos)
+
+def formatoRegistroEmpleo = ['Cargo':'','Años':'','Empresa':'']
+def nuevoRegistro = ['Cargo':'Guarda Seguridad','Años':4,'Empresa':'Securitas']
