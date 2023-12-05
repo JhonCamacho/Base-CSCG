@@ -20,10 +20,17 @@ baseEmpresa['101567786']=['Nombre':'Paola','apellido':'Ruiz','segnom':'Andrea','
 baseEmpresa['1022864345']=['Nombre':'Lorena','apellido':'Rincon','segnom':'Marcela','nickname':'Lomari',
 'Empleos':[["Cargo":"Gerente talento humano","Años":2,"Empresa":"Humanoide"],["Cargo":"Supervisor","años":3,"Empresa":"RecursoH"],["Cargo":"Analista","años":5,"Empresa":"TalentX"]]
  ,"Direccion":"Avenida 68 calle 77 - 15"]
- 
-//Validacion manual lista Ids informacion empleados.
-def relacionIdPlanta = ['101567786','1012345211','1022864345']
 
-relacionIdPlanta.each{id ->
-  println(baseEmpresa[id])
+def listadoPlanta = ['101567786','1012345211','72345667']
+
+//Funcion que recibe una lista de Ids o numeros de identificacion y retonara la informacio contenida del empleado que corresponda.
+def relacionIdPlanta (base , relacion) {
+  relacion.each{identificacion ->
+    if (base.containsKey(identificacion)){
+      println(base[identificacion])
+    }else{
+      println('Id no corresponde a un empleado')
+    }
+ }
 }
+relacionIdPlanta (baseEmpresa, listadoPlanta)
