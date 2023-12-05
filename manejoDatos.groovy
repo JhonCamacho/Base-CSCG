@@ -21,14 +21,9 @@ baseEmpresa['1022864345']=['Nombre':'Lorena','apellido':'Rincon','segnom':'Marce
 'Empleos':[["Cargo":"Gerente talento humano","Años":2,"Empresa":"Humanoide"],["Cargo":"Supervisor","años":3,"Empresa":"RecursoH"],["Cargo":"Analista","años":5,"Empresa":"TalentX"]]
  ,"Direccion":"Avenida 68 calle 77 - 15"]
  
-//Validaciones forma de obtener informacion.
-println(baseEmpresa)
-println(baseEmpresa.'1014230323'.Empleos)
-println(baseEmpresa['1014230323']['Empleos'][2])
-println(baseEmpresa.'1014230323'.Empleos[2])
-println(baseEmpresa.'1014230323'['Empleos'][2])
-println(baseEmpresa.'1014230323'['Direccion'])
+//Validacion manual lista Ids informacion empleados.
+def relacionIdPlanta = ['101567786','1012345211','1022864345']
 
- baseEmpresa.each{empleados ->
-  println(empleados)
- }
+relacionIdPlanta.each{id ->
+  println(baseEmpresa[id])
+}
