@@ -21,7 +21,6 @@ baseEmpresa['1022864345']=['Nombre':'Lorena','Apellido':'Rincon','Segnom':'Marce
 'Empleos':[["Cargo":"Gerente talento humano","Años":2,"Empresa":"Humanoide"],["Cargo":"Supervisor","Años":3,"Empresa":"RecursoH"],["Cargo":"Analista","Años":5,"Empresa":"TalentX"]]
  ,"Direccion":"Avenida 68 calle 77 - 15"]
  
- 
 //Formatos de registro de empleado.
 def formatoContratacion = ['Cedula**':['Nombre**':'','Apellido**':'','Segnom':'','Nickname**':'','Empleos':[],'Direccion**':'']]
 def nombreMapa=['70569396':['Nombre':'Kevin','Apellido':'Marin','Segnom':'','Nickname':'Paz','Empleos':[],'Direccion':'Av carrera 33 casa esquina verde']]
@@ -46,8 +45,6 @@ def validacionCampos(mapaAspirante){
   }
  return resultado
 }
-def validacion=validacionCampos(nombreMapa)
-println (validacion)
 
 //Integracion de funciones de validacion y contratacion.
 def contratarEmpleado (base, mapaEmpleado){
@@ -65,6 +62,3 @@ def contratarEmpleado (base, mapaEmpleado){
 }
 contratarEmpleado(baseEmpresa,nombreMapa)
 
-baseEmpresa.each{empleados ->
-  println(empleados)
-}
