@@ -32,3 +32,4 @@ def experiencia (base){
    }
   return duracion
  }
+    
