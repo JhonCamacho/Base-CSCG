@@ -32,4 +32,4 @@ def AgregarNuevoEmpleo (base , empleado ,empleo){
 }
 AgregarNuevoEmpleo (baseEmpresa , '72345667' ,nuevoRegistro)
 
-println(baseEmpresa.'72345667')
+
