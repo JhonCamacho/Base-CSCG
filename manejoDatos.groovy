@@ -32,4 +32,3 @@ def experiencia (base){
    }
   return duracion
  }
-println(experiencia (baseEmpresa))
