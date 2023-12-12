@@ -26,7 +26,7 @@ def experiencia (base){
    def tiempo = 0
    def duracion=[]
    base.each{empleado ->
-   tiempo =empleado.value.Empleos[0].Años+empleado.value.Empleos[1].Años+empleado.value.Empleos[2].Años   
+   tiempo =empleado.value.Empleos.Años.sum() 
    println(tiempo)
    duracion.add(tiempo)
    }
